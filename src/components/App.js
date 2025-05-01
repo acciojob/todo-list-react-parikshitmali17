@@ -76,7 +76,7 @@ const App = () => {
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
         />
-        <button onClick={handleAdd}>Add</button>
+        <button style={{backgroundColor:"blue" ,color:"white"}} onClick={handleAdd}>Add</button>
       </div>
 
       {tasks.map((task, index) => (
@@ -96,10 +96,11 @@ const App = () => {
           ) : (
             <>
               <p className="task">{task}</p>
-              <button className="edit" onClick={() => handleEditClick(index)}>
+              <button style={{backgroundColor:"green" ,color:"white"}} className="edit" onClick={() => handleEditClick(index)}>
                 Edit
               </button>
               <button
+              style={{backgroundColor:"red" ,color:"white"}}
                 className="delete"
                 onClick={() => handleDeleteTask(index)}
               >
